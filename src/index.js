@@ -1,20 +1,9 @@
-import React from 'react';
-import NavBar from './components/NavBar'
-import './App.css'
-import Router from './Router'
-import { BrowserRouter } from 'react-router-dom'
-import { Provider } from 'react-redux'
-import store from './redux/store'
+import React from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import App from "./App";
 
-function App() {
-  return (
-    <Provider store={store}>
-      <BrowserRouter>
-        <NavBar />
-        <Router />
-      </BrowserRouter>
-    </Provider>
-  );
-}
+const root = createRoot(document.getElementById("root"));
+root.render(<App />);
 
-export default App;
+
